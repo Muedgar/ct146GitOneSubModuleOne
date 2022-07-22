@@ -5,7 +5,7 @@ import EyLogo from "../assets/Eye.svg";
 
 function AboutUsComponent() {
     return(
-        <div className="aboutUsContainer">
+        <div id="aboutus" className="aboutUsContainer">
             <h1>Who We Are</h1>
 
             <div className="aboutUsDivs">

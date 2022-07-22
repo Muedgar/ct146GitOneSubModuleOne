@@ -3,7 +3,7 @@ import "./ServiceComponent.css";
 
 function ServiceComponent() {
     return (
-        <div className="serviceComponent">
+        <div id="services" className="serviceComponent">
             <h3>OUR SERVICES</h3>
 
             <p>CT 146 Company Helps People To Transfer Their Insurance From One Insurance Company To Another. We Work With RSSB and MUTUELLE Insurance.</p>

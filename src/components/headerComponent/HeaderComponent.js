@@ -5,7 +5,7 @@ import FaceLogo from "../assets/Facebook.svg";
 import TwiLogo from "../assets/Twitter.svg";
 function HeaderComponents() {
     return(
-        <div className="headerClass">
+        <div id="home0" className="headerClass">
             <h1>Contact Us: 0793894000</h1>
             <div className="headerIconsClass">
                 <div className="headerIcon">
