@@ -1,0 +1,171 @@
+.pageOneOneContentOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pageOneOneContainerTitle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(17,19,114);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+.pageOneOneContentButton {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgb(168, 211, 14);
+    color:white;
+    box-shadow: 0px 0px 10px 11px #dadada;
+}
+.pageOneOneContentButton:hover {
+    box-shadow: 0px 0px 1px 1px #dadada;
+}
+.pageOneOneContentContainer {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.pageOneOneSideNav {
+    width: 25vw;
+    height: 90%;
+    background-color: rgb(229,226,252);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.pageOneOneSideNav h2 {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: rgb(17,19,114);
+    text-transform: uppercase;
+}
+
+.pageOneOneSideNav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pageOneOneSideNav ul li {
+    width: 90%;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(229,226,252);
+    border-radius: 5px;
+    padding-top: 5px;
+    transition: all .3s linear;
+}
+.pageOneOneSideNav ul li:hover {
+    box-shadow: 0 0 10px 10px rgb(181, 178, 199);
+}
+.pageOneOneSideNav ul li span {
+    padding-top: 10px;
+}
+.pageOneOneSideNav ul li img {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-left: 3px;
+}
+
+.pageOneOneRightSide {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 90%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.pageOneOneRightSide h2 {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: rgb(17,19,114);
+    text-transform: uppercase;
+}
+
+.pageOneOneRightSide form {
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 0 4px 4px rgb(229,226,252);
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.pageOneOneRightSide form h3 {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: rgb(17,19,114);
+}
+.pageOneOneRightSide form p {
+    width: 70%;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: rgb(14, 15, 72);
+    margin: 20px auto;
+}
+.pageOneOneRightSide form select {
+    cursor: pointer;
+    box-shadow: 0 0 3px 3px rgb(229,226,252);
+}
+
+
+.pageOneOneRightSide button {
+    width: 75%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 6vw;
+    align-self: center;
+    background-color: rgb(17,19,114);
+    color:white;
+    box-shadow: 0px 0px 10px 11px #dadada;
+
+}
+
+.pageOneOneRightSide button:hover {
+    box-shadow: 0px 0px 1px 1px #dadada;
+    background-color: rgb(168, 211, 14);
+}

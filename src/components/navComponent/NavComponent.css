@@ -1,0 +1,61 @@
+.navComponentContainer {
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(230,233,241);
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navComponentLogo {
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.navComponentLogo label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(17,19,114);
+}
+.navComponentLinks {
+    width: 40vw;
+    height: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+.navComponentLinks li {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+.navComponentSignUp {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgb(168, 211, 14);
+    color:white;
+    box-shadow: 0px 0px 10px 11px #dadada;
+}
+.navComponentSignUp:hover {
+    box-shadow: 0px 0px 1px 1px #dadada;
+}

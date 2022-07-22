@@ -1,0 +1,118 @@
+.heroContainer {
+    width: 100vw;
+    background-color: rgb(230,233,241);
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heroLeftContainer {
+    padding-left: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.heroLeftTitle {
+    width: 35vw;
+    word-wrap: break-word;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: left;
+    color: rgb(17,19,114);
+    line-height: 1.5em;
+}
+.heroLeftContainer label {
+    width: 35vw;
+    word-wrap: break-word;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(17,19,114);
+}
+.heroLeftContainer label span {
+    color: rgb(168, 211, 14);
+    font-weight: bolder;
+}
+.heroLeftContainer button {
+    margin-top: 50px;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgb(168, 211, 14);
+    color:white;
+    box-shadow: 0px 0px 10px 11px #dadada;
+}
+
+.heroLeftContainer button:hover {
+    box-shadow: 0px 0px 1px 1px #dadada;
+}
+
+.heroRightContainer {
+    width: 500px;
+    height: 350px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 0 4px 4px rgb(230, 228, 228);
+    position:relative;
+}
+.heroRightContainer input {
+    width: 85%;
+    align-self: center;
+    cursor:text;
+}
+
+.heroRightContainer label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color:#333;
+    position: absolute;
+    top: 35vh;
+    left: 12vw;
+}
+.heroRightContainer label span {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(17,19,114);
+}
+
+.heroRightContainer button {
+    margin-top: 50px;
+    width: 85%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+    align-self: center;
+    background-color: rgb(17,19,114);
+    color:white;
+    box-shadow: 0px 0px 10px 11px #dadada;
+}
+
+.heroRightContainer button:hover {
+    box-shadow: 0px 0px 1px 1px #dadada;
+    background-color: rgb(168, 211, 14);
+}
