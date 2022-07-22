@@ -11,7 +11,7 @@ function HeroComponent() {
                 <button>Read More</button>
             </div>
 
-            <form className="heroRightContainer">
+            <form className="heroRightContainer" action="/requestChangeOfInsurance">
                 <title>Login Your Account</title>
                 <input className="form-control" type="text" placeholder="Email" />
                 <input className="form-control" type="password" placeholder="Password" />
