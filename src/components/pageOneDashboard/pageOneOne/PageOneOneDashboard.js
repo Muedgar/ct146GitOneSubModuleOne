@@ -5,12 +5,38 @@ import "./PageOneOneDashboard.css";
 import NavLinkLogo from "../../assets/NavLinkLogo.svg";
 
 function PageOneOneDashboard() {
+
+        fetch("http://localhost:3001/getLoggedIn")
+                .then(res=>res.json())
+                .then(d=> {
+                    console.log("running",d);
+                    if(!d.status || d.role!='user') {
+                        console.log("trying to redirect");
+                        window.location = "/signup";
+                    }
+                }).catch(e=>console.log(e.message));
+
+
+    function handleLogout() {
+        // delete jwt.
+
+        console.log("clicked logout");
+
+        async function logout() {
+            await fetch("http://localhost:3001/logout").then(d=>d.json()).then(a=> {
+                window.location = "/signup";
+            }).catch(e=>console.log(e.message));
+        }
+        logout();
+    }
+    
+
     return (
         <div className="pageOneOneContainer">
             <HeaderComponent />
             <div className="pageOneOneContentOne">
                 <h1 className="pageOneOneContainerTitle">CT146</h1>
-                <Link to="/"><button className="pageOneOneContentButton">Logout</button></Link>
+                <button onClick={handleLogout} className="pageOneOneContentButton">Logout</button>
             </div>
         <div className="pageOneOneContentContainer">
             <div className="pageOneOneSideNav">

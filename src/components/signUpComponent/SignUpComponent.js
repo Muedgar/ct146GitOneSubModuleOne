@@ -4,6 +4,91 @@ import { Link } from "react-router-dom";
 import "./SignUpComponent.css";
 
 function SignUpComponent() {
+
+    async function handleSignUp(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const name = document.getElementById("name").value;
+        const nationalId = document.getElementById("nationalId").value;
+        const phone = document.getElementById("phone").value;
+        const dob = document.getElementById("dob").value;
+        const address = document.getElementById("address").value;
+
+        // setting roles
+        let arrayOne = email.split("@");
+        let arrayTwo = arrayOne[0].split(".");
+
+        let roles = "";
+        if(!arrayTwo[1]) {
+            roles="user";
+            console.log("empty",roles);
+            
+        }
+        if(arrayTwo[1] === "rssb") {
+            roles = "insurance";
+        }else if(arrayTwo[1] !== "rssb"){
+            roles = "user";
+        }
+
+        let data = {
+            email,
+            password,
+            name,
+            nationalId,
+            phone,
+            dob,
+            address,
+            roles
+        }
+
+        
+        await fetch("http://localhost:3001/signup", {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+      }).then(response=>response.json()).then(async d=> {
+        let role = d.user.roles;
+        console.log(d.jwt);
+
+        if(role === "insurance") {
+            
+            await fetch("http://localhost:3001/insuranceDashboard/"+d.jwt+"/"+role)
+                .then(res=>res.json())
+                .then(d=>{
+                    console.log(d);
+                }).catch(e=>console.log(e));
+            return;
+        }
+
+        if(role === "user") {
+
+            await fetch("http://localhost:3001/userDashboard/"+d.jwt+"/"+role)
+            .then(res=>res.json())
+            .then(async d=>{
+                if(d.userDashboard) {
+                    await fetch("http://localhost:3001/setLoggedIn/user").then(res=>{
+                        res.json();
+                    }).then(d=> {
+                        window.location = "/requestChangeOfInsurance";
+                    }).catch(e=> console.log(e.message))
+                }
+            }).catch(e=>console.log(e));
+        }
+        // fetch specific user
+      }).catch(e=>console.log(e.message));
+
+
+    }
+
     return(
         <div className="heroContainer2">
             <div className="heroLeftContainer2">
@@ -12,17 +97,17 @@ function SignUpComponent() {
                 <button>Read More</button>
             </div>
 
-            <form className="heroRightContainer2">
+            <form onSubmit={handleSignUp} id="signup" className="heroRightContainer2">
                 <title>Login Your Account</title>
-                <input className="form-control" type="text" placeholder="Email" />
-                <input className="form-control" type="password" placeholder="Password" />
-                <input className="form-control" type="text" placeholder="Name" />
-                <input className="form-control" type="number" placeholder="National Id" />
-                <input className="form-control" type="tel" placeholder="Phone" />
-                <input className="form-control" type="date" placeholder="Date of Birth" />
-                <input className="form-control" type="text" placeholder="Address" />
+                <input id="email" className="form-control" type="text" placeholder="Email" />
+                <input id="password" className="form-control" type="password" placeholder="Password" />
+                <input id="name" className="form-control" type="text" placeholder="Name" />
+                <input id="nationalId" className="form-control" type="number" placeholder="National Id" />
+                <input id="phone" className="form-control" type="number" placeholder="Phone" />
+                <div className="DobDesign"><input id="dob" className="form-control" type="date" placeholder="Date of Birth"/><span>Date Of Birth</span></div>
+                <input id="address" className="form-control" type="text" placeholder="Address" />
                 <label>Already Have Account? <Link to="/"><span>Login Here</span></Link></label>
-                <Link to="/requestChangeOfInsurance"><button className="btn" type="submit">Sign Up</button></Link>
+                <button className="btn" type="submit">Sign Up</button>
             </form>
         </div>
     );

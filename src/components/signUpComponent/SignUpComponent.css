@@ -117,3 +117,12 @@
     box-shadow: 0px 0px 1px 1px #dadada;
     background-color: rgb(168, 211, 14);
 }
+.DobDesign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.DobDesign input {
+    width: 60%;
+    margin-right: 5px;
+}

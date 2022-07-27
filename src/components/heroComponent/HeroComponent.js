@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./HeroComponent.css";
 
 function HeroComponent() {
+
+    
     return(
         <div className="heroContainer">
             <div className="heroLeftContainer">
@@ -16,7 +18,7 @@ function HeroComponent() {
                 <input className="form-control" type="text" placeholder="Email" />
                 <input className="form-control" type="password" placeholder="Password" />
                 {/* <input className="form-control" type="date" placeholder="Date of Birth" /> */}
-                <label>Forgot Password? <Link to="/signup"><span>Reset It Here</span></Link></label>
+                <label>Don't have an account? <Link to="/signup"><span>Register Here</span></Link></label>
                 <button className="btn" type="submit">Login</button>
             </form>
         </div>
