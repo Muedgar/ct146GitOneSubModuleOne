@@ -6,7 +6,7 @@ import NavLinkLogo from "../../assets/NavLinkLogo.svg";
 
 function PageOneOneDashboard() {
 
-        fetch("http://localhost:3001/getLoggedIn")
+        fetch("getLoggedIn")
                 .then(res=>res.json())
                 .then(d=> {
                     console.log("running",d);
@@ -23,7 +23,7 @@ function PageOneOneDashboard() {
         console.log("clicked logout");
 
         async function logout() {
-            await fetch("http://localhost:3001/logout").then(d=>d.json()).then(a=> {
+            await fetch("logout").then(d=>d.json()).then(a=> {
                 window.location = "/signup";
             }).catch(e=>console.log(e.message));
         }

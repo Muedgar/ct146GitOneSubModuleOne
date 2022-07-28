@@ -44,7 +44,7 @@ function SignUpComponent() {
         }
 
         
-        await fetch("http://localhost:3001/signup", {
+        await fetch("signup", {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
@@ -61,7 +61,7 @@ function SignUpComponent() {
 
         if(role === "insurance") {
             
-            await fetch("http://localhost:3001/insuranceDashboard/"+d.jwt+"/"+role)
+            await fetch("insuranceDashboard/"+d.jwt+"/"+role)
                 .then(res=>res.json())
                 .then(d=>{
                     console.log(d);
@@ -71,11 +71,11 @@ function SignUpComponent() {
 
         if(role === "user") {
 
-            await fetch("http://localhost:3001/userDashboard/"+d.jwt+"/"+role)
+            await fetch("userDashboard/"+d.jwt+"/"+role)
             .then(res=>res.json())
             .then(async d=>{
                 if(d.userDashboard) {
-                    await fetch("http://localhost:3001/setLoggedIn/user").then(res=>{
+                    await fetch("setLoggedIn/user").then(res=>{
                         res.json();
                     }).then(d=> {
                         window.location = "/requestChangeOfInsurance";
@@ -106,6 +106,7 @@ function SignUpComponent() {
                 <input id="phone" className="form-control" type="number" placeholder="Phone" />
                 <div className="DobDesign"><input id="dob" className="form-control" type="date" placeholder="Date of Birth"/><span>Date Of Birth</span></div>
                 <input id="address" className="form-control" type="text" placeholder="Address" />
+                <div className="spaceSignUp"></div>
                 <label>Already Have Account? <Link to="/"><span>Login Here</span></Link></label>
                 <button className="btn" type="submit">Sign Up</button>
             </form>
