@@ -1,8 +1,4 @@
-.spaceSignUp {
-    width: 100%;
-    height: 100px;
-    background-color: black;
-}
+
 .heroContainer2 {
     width: 100vw;
     background-color: rgb(230,233,241);
@@ -91,7 +87,7 @@
     font-weight: 500;
     color:#333;
     position: absolute;
-    top: 66vh;
+    top: 80vh;
     left: 12vw;
 }
 .heroRightContainer2 label span {

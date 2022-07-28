@@ -106,7 +106,7 @@ function SignUpComponent() {
                 <input id="phone" className="form-control" type="number" placeholder="Phone" />
                 <div className="DobDesign"><input id="dob" className="form-control" type="date" placeholder="Date of Birth"/><span>Date Of Birth</span></div>
                 <input id="address" className="form-control" type="text" placeholder="Address" />
-                <div className="spaceSignUp"></div>
+                
                 <label>Already Have Account? <Link to="/"><span>Login Here</span></Link></label>
                 <button className="btn" type="submit">Sign Up</button>
             </form>

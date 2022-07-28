@@ -6,15 +6,26 @@ import NavLinkLogo from "../../assets/NavLinkLogo.svg";
 
 function PageOneOneDashboard() {
 
-        fetch("getLoggedIn")
-                .then(res=>res.json())
-                .then(d=> {
-                    console.log("running",d);
-                    if(!d.status || d.role!='user') {
-                        console.log("trying to redirect");
-                        window.location = "/signup";
-                    }
-                }).catch(e=>console.log(e.message));
+       function checkLogin() {
+           console.log("checking currently logged in");
+           async function check() {
+            await fetch("getLoggedIn",{
+                headers:{
+                    "accepts":"application/json"
+                }
+            })
+            .then(res=>res.json())
+            .then(d=> {
+                console.log("running",d);
+                if(!d.status || d.role!='user') {
+                    console.log("trying to redirect");
+                    window.location = "/signup";
+                }
+            }).catch(e=>console.log(e.message));
+           }
+           check();
+       }
+       checkLogin();
 
 
     function handleLogout() {
