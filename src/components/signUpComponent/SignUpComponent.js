@@ -61,27 +61,34 @@ function SignUpComponent() {
 
         if(role === "insurance") {
             
-            await fetch("insuranceDashboard/"+d.jwt+"/"+role)
-                .then(res=>res.json())
-                .then(d=>{
-                    console.log(d);
-                }).catch(e=>console.log(e));
+            // await fetch("")
+            //     .then(res=>res.json())
+            //     .then(d=>{
+            //         console.log(d);
+            //     }).catch(e=>console.log(e));
+            // store data to session
+            sessionStorage.setItem('currentlyLoggedin', JSON.stringify(d.user));
+
+            window.location = "agent/pending";
             return;
         }
 
         if(role === "user") {
 
-            await fetch("userDashboard/"+d.jwt+"/"+role)
-            .then(res=>res.json())
-            .then(async d=>{
-                if(d.userDashboard) {
-                    await fetch("setLoggedIn/user").then(res=>{
-                        res.json();
-                    }).then(d=> {
-                        window.location = "/requestChangeOfInsurance";
-                    }).catch(e=> console.log(e.message))
-                }
-            }).catch(e=>console.log(e));
+            // await fetch()
+            // .then(res=>res.json())
+            // .then(async d=>{
+            //     if(d.userDashboard) {
+            //         await fetch("setLoggedIn/user").then(res=>{
+            //             res.json();
+            //         }).then(d=> {
+            //             window.location = "/requestChangeOfInsurance";
+            //         }).catch(e=> console.log(e.message))
+            //     }
+            // }).catch(e=>console.log(e));
+            sessionStorage.setItem('currentlyLoggedin', JSON.stringify(d.user));
+
+            window.location = "user/sending";
         }
         // fetch specific user
       }).catch(e=>console.log(e.message));
@@ -103,11 +110,11 @@ function SignUpComponent() {
                 <input id="password" className="form-control" type="password" placeholder="Password" />
                 <input id="name" className="form-control" type="text" placeholder="Name" />
                 <input id="nationalId" className="form-control" type="number" placeholder="National Id" />
-                <input id="phone" className="form-control" type="number" placeholder="Phone" />
+                <input id="phone" className="form-control" type="number" placeholder="Phone Number" />
                 <div className="DobDesign"><input id="dob" className="form-control" type="date" placeholder="Date of Birth"/><span>Date Of Birth</span></div>
                 <input id="address" className="form-control" type="text" placeholder="Address" />
                 
-                <label>Already Have Account? <Link to="/"><span>Login Here</span></Link></label>
+                <label>Already Have Account? <Link to="/login"><span>Login Here</span></Link></label>
                 <button className="btn" type="submit">Sign Up</button>
             </form>
         </div>

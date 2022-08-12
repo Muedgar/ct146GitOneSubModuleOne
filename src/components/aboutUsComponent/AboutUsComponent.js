@@ -20,7 +20,7 @@ function AboutUsComponent() {
                     <label><span>
                     <img src={EyLogo} alt="Eye" />
                     </span><b>Our Vission</b></label>
-                    <p>Vision Of CT146 is to provide our good services to our customer be health and wealth</p>
+                    <p>Vision Of TWEETUP is to provide our good services to our customer be health and wealth</p>
                 </div>
             </div>
         </div>

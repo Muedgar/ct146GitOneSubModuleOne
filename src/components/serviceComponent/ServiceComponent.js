@@ -6,7 +6,7 @@ function ServiceComponent() {
         <div id="services" className="serviceComponent">
             <h3>OUR SERVICES</h3>
 
-            <p>CT 146 Company Helps People To Transfer Their Insurance From One Insurance Company To Another. We Work With RSSB and MUTUELLE Insurance.</p>
+            <p>TWEETUP SOFTWARE Helps People To Transfer Their Insurance From One Insurance Company To Another. We Work With RSSB and MUTUELLE Insurance.</p>
             
             <h4>Dear Customer</h4>
             <h5>We Are Here For You</h5>

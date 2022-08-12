@@ -17,7 +17,7 @@ function PageOneOneDashboard() {
             .then(res=>res.json())
             .then(d=> {
                 console.log("running",d);
-                if(!d.status || d.role!='user') {
+                if(!d.status || d.role!=='user') {
                     console.log("trying to redirect");
                     window.location = "/signup";
                 }

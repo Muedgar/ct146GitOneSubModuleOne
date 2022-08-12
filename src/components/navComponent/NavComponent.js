@@ -8,15 +8,15 @@ function NavComponent(props) {
     return(
         <div id="home" className="navComponentContainer">
             <div className="navComponentLogo">
-                <label>CT146</label>
+                <label>TWEETUP</label>
             </div>
             <ul className="navComponentLinks">
-                <li><a href="#home0">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutus">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                {props.nav==="login" ? <Link to="/"><button className="navComponentSignUp">Log in</button></Link>:<Link to="/signup"><button className="navComponentSignUp">Sign Up</button></Link>}
+                {props.nav==="login" ? <Link to="/login"><button className="navComponentSignUp">Log in</button></Link>:<Link to="/signup"><button className="navComponentSignUp">Sign Up</button></Link>}
             </ul>
-            <a id="homeNav" href="#home0"><img src={UpLogo} /></a>
+            <a id="homeNav" href="#home0"><img src={UpLogo} alt="logo" /></a>
         </div>
     );
 }

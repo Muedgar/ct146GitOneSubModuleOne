@@ -86,9 +86,7 @@
     font-size: 1em;
     font-weight: 500;
     color:#333;
-    position: absolute;
-    top: 80vh;
-    left: 12vw;
+    align-self: center;
 }
 .heroRightContainer2 label span {
     cursor: pointer;
