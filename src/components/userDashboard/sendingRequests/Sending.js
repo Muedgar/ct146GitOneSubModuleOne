@@ -25,7 +25,7 @@ function Sending() {
             hourschedule}
 
 
-            await fetch("user/makeRequest/"+id, {
+            await fetch("/user/makeRequest/"+id, {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',

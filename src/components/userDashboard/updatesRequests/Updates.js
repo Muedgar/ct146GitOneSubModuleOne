@@ -9,7 +9,7 @@ import "../../commonCss/table.css";
   
   async function getData2() {
     let data = [];
-    await fetch("user/makeRequest/getAllRequests")
+    await fetch("/user/makeRequest/getAllRequests")
   .then(d=>d.json())
   .then(d=> {
     data = d;

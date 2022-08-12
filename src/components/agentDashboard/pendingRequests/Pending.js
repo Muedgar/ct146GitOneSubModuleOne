@@ -6,7 +6,7 @@ import "../../commonCss/table.css"
 
 async function getData() {
 let data = [];
-  await fetch("user/makeRequest/getAllUsers")
+  await fetch("/user/makeRequest/getAllUsers")
   .then(d=>d.json())
   .then(d=> {
     data = d;
@@ -18,7 +18,7 @@ let data = [];
 
 async function getData2() {
   let data = [];
-  await fetch("user/makeRequest/getAllRequests")
+  await fetch("/user/makeRequest/getAllRequests")
 .then(d=>d.json())
 .then(d=> {
   data = d;
@@ -48,7 +48,7 @@ useEffect(() => {
     async function handleApprove(id) {
       ///user/makeRequest/
       
-      await fetch("user/makeRequest/approve/"+id, {
+      await fetch("/user/makeRequest/approve/"+id, {
         method: 'PUT',
         mode: 'cors',
         cache: 'no-cache',
@@ -68,7 +68,7 @@ useEffect(() => {
     async function handleReject(id) {
       ///user/makeRequest/
       
-      await fetch("user/makeRequest/reject/"+id, {
+      await fetch("/user/makeRequest/reject/"+id, {
         method: 'PUT',
         mode: 'cors',
         cache: 'no-cache',

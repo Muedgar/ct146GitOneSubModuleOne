@@ -5,7 +5,7 @@ import "../../commonCss/table.css";
 
 async function getData() {
   let data = [];
-    await fetch("user/makeRequest/getAllUsers")
+    await fetch("/user/makeRequest/getAllUsers")
     .then(d=>d.json())
     .then(d=> {
       data = d;
@@ -17,7 +17,7 @@ async function getData() {
   
   async function getData2() {
     let data = [];
-    await fetch("user/makeRequest/getAllRequests")
+    await fetch("/user/makeRequest/getAllRequests")
   .then(d=>d.json())
   .then(d=> {
     data = d;
