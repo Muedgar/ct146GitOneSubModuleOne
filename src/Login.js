@@ -6,6 +6,7 @@ import AboutUsComponent from "./components/aboutUsComponent/AboutUsComponent.js"
 import ServiceComponent from "./components/serviceComponent/ServiceComponent.js";
 
 function Login() {
+  // this is the log in component
   return (
     <div>
       <HeaderComponents />
