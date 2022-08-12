@@ -12,7 +12,7 @@ function NavComponent(props) {
             </div>
             <ul className="navComponentLinks">
                 <li><a href="/">Home</a></li>
-                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="#aboutus">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 {props.nav==="login" ? <Link to="/login"><button className="navComponentSignUp">Log in</button></Link>:<Link to="/signup"><button className="navComponentSignUp">Sign Up</button></Link>}
             </ul>

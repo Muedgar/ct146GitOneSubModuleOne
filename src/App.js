@@ -6,7 +6,7 @@ import PageOneOneDashboard from "./components/pageOneDashboard/pageOneOne/PageOn
 import PageOneThreeDashboard from "./components/pageOneDashboard/pageOneThree/PageOneThreeDashboard";
 import PageOneTwoDashboard from "./components/pageOneDashboard/pageOneTwo/PageOneTwoDashboard";
 import PageTwoDashboard from "./components/pageTwoDashboard/PageTwoDashboard";
-import Home from "./components/home/Home";
+
 import Navigation from "./components/agentDashboard/Navigation";
 import NavigationTwo from "./components/userDashboard/NavigationTwo";
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/requestChangeOfInsurance" element={<PageOneOneDashboard/>} />
